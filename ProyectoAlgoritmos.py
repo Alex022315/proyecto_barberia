@@ -27,8 +27,9 @@ def servicios():
 
 
 def agendar_cita():
-     print("\n------------ Agendar cita --------------")
-     nombre = input("Ingrese su nombre: ")   
+     print("""\n------------ Agendar cita --------------
+    Horarios de atención L-D de 9 am a 20 pm""")
+     nombre = input("Ingrese su nombre y apellido: ")   
      print()
      servicio_opcion = 0
      while servicio_opcion not in range(1, 5):
@@ -43,9 +44,9 @@ def agendar_cita():
      precio = servicios_precios[servicio_opcion]
 
      print()
-     fecha = input("Ingrese la fecha que desea agendar la cita (dd/mm/aaaa): ")
+     fecha = input("Ingrese la fecha que desea agendar la cita (dd-mm-aaaa): ")
      print()
-     hora = input("Ingrese la hora que desea el corte (HH:MM): ")
+     hora = input("Ingrese la hora que desea el corte (Formato de 24 horas 14:00): ")
      
      print("\n Su cita se ha agendado con éxito\n")
      print(f"Cliente: {nombre}")
@@ -69,7 +70,7 @@ def cancelar_cita():
     if not citas:
         print("No hay citas registradas")
         return
-    nombre = input("Ingrese su nombre para buscar su cita: ").strip().lower()
+    nombre = input("Ingrese su nombre y apellido para buscar su cita: ").strip().lower()
     for cita in citas:
         if cita["nombre"].strip().lower() == nombre:
             citas.remove(cita)
@@ -99,7 +100,7 @@ def ver_ingresos():
 def menu():
     while True:
         print("""
----------------BIENVENIDO A  NUESTRA BARBERIA-----------------
+---------------BIENVENIDO A  NUESTRA BARBERÍA-----------------
 
   Por favor observe la opción que busca:
        
