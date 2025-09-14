@@ -107,8 +107,8 @@ def menu():
        1) Agendar cita
        2) Cancelar cita
        3) Citas programadas
-       4) Salir del programa
-       5) Ver ingresos totales
+       4) Ver ingresos totales
+       5) Salir del programa 
 """)
         try:
              opcion = int(input("Ingrese la opción que requiere: "))    
@@ -121,10 +121,11 @@ def menu():
              elif opcion == 3:
                   citass()
              elif opcion == 4:
+                  ver_ingresos()
+             elif opcion == 5:
                   print("Gracias por visitar nuestra barbería. ¡Hasta luego!")
                   break
-             elif opcion == 5:
-                  ver_ingresos()
+                  
              else:
                   print("Opción inválida, intente de nuevo.")
         except ValueError:
